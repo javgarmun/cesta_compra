@@ -1,34 +1,38 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "cesta_compra",
+    'name': "Cesta de la Compra",
 
     'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
-
-    'description': """
-        Long description of module's purpose
+        Gestiona cestas de la compra con productos, clientes y cálculos automáticos de totales en Odoo.
     """,
 
-    'author': "My Company",
-    'website': "http://www.yourcompany.com",
+    'description': """
+        Este módulo permite gestionar cestas de la compra asociadas a clientes dentro de Odoo. 
+        Incluye funcionalidades para agregar productos o servicios a las cestas, calcular subtotales 
+        automáticamente en las líneas de la cesta y gestionar el total global. 
 
-    # Categories can be used to filter modules in modules listing
-    # Check https://github.com/odoo/odoo/blob/13.0/odoo/addons/base/data/ir_module_category_data.xml
-    # for the full list
-    'category': 'Uncategorized',
-    'version': '0.1',
+        Características principales:
+        - Asociación de cestas a clientes y productos.
+        - Cálculo automático de subtotales y totales.
+        - Vistas intuitivas para la gestión de clientes, cestas y productos.
+    """,
 
-    # any module necessary for this one to work correctly
+    'author': "Javier García Muñoz",
+    'website': "https://github.com/javgarmun/cesta_compra",
+
+    'category': 'Sales',
+    'version': '1.0',
+
+    # Dependencias necesarias
     'depends': ['base'],
 
-    # always loaded
+    # Archivos de datos cargados por el módulo
     'data': [
         # 'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
     ],
-    # only loaded in demonstration mode
+    # Archivos de demostración
     'demo': [
         'demo/demo.xml',
     ],
