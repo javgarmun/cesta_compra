@@ -45,7 +45,7 @@
                         <!-- Pestaña de cestas: Muestra las cestas asociadas al cliente -->
                         <notebook>
                             <page string="Cestas">
-                                <field name="cesta_ids">
+                                <field name="cesta_ids" readonly="1">
                                     <tree string="Cestas del Cliente">
                                         <field name="name"/>
                                         <field name="fecha_pedido"/>
