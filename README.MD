@@ -23,13 +23,13 @@ usuarios finales gestionar su compra de manera eficiente.
 git clone https://github.com/javgarmun/cesta_compra.git
 ```
 
-2. **Descomprime y coloca el módulo en la carpeta de `odoo-custom-addons`. Reinicia posteriormente el servidor de Odoo
+2. **Descomprime y coloca el módulo en la carpeta de `odoo-custom-addons`. Reinicia el servidor de Odoo
    para que el módulo sea detectado.**
    
 
 3. **Instala el módulo desde la interfaz de Odoo (recuerda activar el modo desarrollador):**
    - Ve al menú de "Aplicaciones"
-   - Busca el módulo "Cesta de la Compra"
+   - Busca el módulo "Cesta de la Compra" o simplemente filtra por "cesta"
    - Localiza el módulo y haz clic en "Instalar"
    
 ## Autor
