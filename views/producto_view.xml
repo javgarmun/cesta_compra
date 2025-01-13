@@ -1,0 +1,46 @@
+<odoo>
+    <data>
+        <!-- CLASE PRODUCTO -->
+        <!-- Vista de lista para visualizar los productos -->
+        <record model="ir.ui.view" id="cesta_compra_producto_list">
+            <field name="name">Lista Producto</field>
+            <field name="model">cesta_compra.producto</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="descripcion"/>
+                    <field name="precio"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Vista de formulario para crear o editar un producto -->
+        <record model="ir.ui.view" id="cesta_compra_producto_form">
+            <field name="name">Formulario Producto</field>
+            <field name="model">cesta_compra.producto</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <!-- Campos básicos del Producto -->
+                        <group>
+                            <field name="name"/>
+                            <field name="descripcion"/>
+                            <field name="precio"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Acción para abrir la vista de Productos, con posibilidad de ver la lista o el formulario -->
+        <record model="ir.actions.act_window" id="cesta_compra_producto_action">
+            <field name="name">Productos</field>
+            <field name="res_model">cesta_compra.producto</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Elemento de menú que llevará a la vista de Productos -->
+        <menuitem name="Productos" id="cesta_compra.menu_producto" parent="cesta_compra.menu_root"
+                  action="cesta_compra_producto_action"/>
+    </data>
+</odoo>

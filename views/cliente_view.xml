@@ -1,0 +1,74 @@
+<odoo>
+    <data>
+        <!-- CLASE CLIENTE -->
+        <!-- Vista de lista para visualizar todos los clientes -->
+        <record model="ir.ui.view" id="cesta_compra_cliente_list">
+            <field name="name">Lista liente</field>
+            <field name="model">cesta_compra.cliente</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <!-- Definición de los campos a mostrar en la lista de clientes -->
+                    <field name="name"/>
+                    <field name="apellidos"/>
+                    <field name="email"/>
+                    <field name="telefono"/>
+                    <field name="country_id"/>
+                    <field name="numero_cestas"/>
+                    <field name="gasto_total" string="Gasto Total"/>
+                    <field name="activo" widget="boolean_icon"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Vista de formulario para editar o visualizar la información de un cliente -->
+        <record model="ir.ui.view" id="cesta_compra_cliente_form">
+            <field name="name">Formulario de Cliente</field>
+            <field name="model">cesta_compra.cliente</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <!-- Información básica del Cliente -->
+                        <group>
+                            <field name="name"/>
+                            <field name="apellidos"/>
+                            <field name="email"/>
+                            <field name="telefono"/>
+                            <field name="direccion"/>
+                            <field name="country_id"/>
+                            <field name="activo" widget="boolean_icon"/>
+                        </group>
+                        <!-- Información resumen del cliente, como número de cestas y gasto total -->
+                        <group string="Resumen de Compra">
+                            <field name="numero_cestas" readonly="1"/>
+                            <field name="gasto_total" readonly="1"/>
+                        </group>
+                        <!-- Pestaña de cestas: Muestra las cestas asociadas al cliente -->
+                        <notebook>
+                            <page string="Cestas">
+                                <field name="cesta_ids">
+                                    <tree string="Cestas del Cliente">
+                                        <field name="name"/>
+                                        <field name="fecha_pedido"/>
+                                        <field name="estado"/>
+                                        <field name="total_cesta"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Acción que define cómo se abre la vista de lista y formulario para los clientes -->
+        <record model="ir.actions.act_window" id="cesta_compra_cliente_window">
+            <field name="name">Clientes</field>
+            <field name="res_model">cesta_compra.cliente</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Elemento de menú: Añade un elemento al menú principal de la aplicación para acceder a la lista de clientes -->
+        <menuitem name="Clientes" id="cesta_compra.menu_cliente" parent="cesta_compra.menu_root"
+                  action="cesta_compra_cliente_window"/>
+    </data>
+</odoo>

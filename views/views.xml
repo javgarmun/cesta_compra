@@ -1,60 +1,6 @@
 <odoo>
-  <data>
-    <!-- explicit list view definition -->
-<!--
-    <record model="ir.ui.view" id="cesta_compra.list">
-      <field name="name">cesta_compra list</field>
-      <field name="model">cesta_compra.cesta_compra</field>
-      <field name="arch" type="xml">
-        <tree>
-          <field name="name"/>
-          <field name="value"/>
-          <field name="value2"/>
-        </tree>
-      </field>
-    </record>
--->
-
-    <!-- actions opening views on models -->
-<!--
-    <record model="ir.actions.act_window" id="cesta_compra.action_window">
-      <field name="name">cesta_compra window</field>
-      <field name="res_model">cesta_compra.cesta_compra</field>
-      <field name="view_mode">tree,form</field>
-    </record>
--->
-
-    <!-- server action to the one above -->
-<!--
-    <record model="ir.actions.server" id="cesta_compra.action_server">
-      <field name="name">cesta_compra server</field>
-      <field name="model_id" ref="model_cesta_compra_cesta_compra"/>
-      <field name="state">code</field>
-      <field name="code">
-        action = {
-          "type": "ir.actions.act_window",
-          "view_mode": "tree,form",
-          "res_model": model._name,
-        }
-      </field>
-    </record>
--->
-
-    <!-- Top menu item -->
-<!--
-    <menuitem name="cesta_compra" id="cesta_compra.menu_root"/>
--->
-    <!-- menu categories -->
-<!--
-    <menuitem name="Menu 1" id="cesta_compra.menu_1" parent="cesta_compra.menu_root"/>
-    <menuitem name="Menu 2" id="cesta_compra.menu_2" parent="cesta_compra.menu_root"/>
--->
-    <!-- actions -->
-<!--
-    <menuitem name="List" id="cesta_compra.menu_1_list" parent="cesta_compra.menu_1"
-              action="cesta_compra.action_window"/>
-    <menuitem name="Server to list" id="cesta_compra" parent="cesta_compra.menu_2"
-              action="cesta_compra.action_server"/>
--->
-  </data>
+    <data>
+        <!-- Menú principal de la aplicación "Cesta de la Compra" -->
+        <menuitem name="Cesta de la Compra" id="cesta_compra.menu_root"/>
+    </data>
 </odoo>

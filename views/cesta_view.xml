@@ -1,0 +1,71 @@
+<odoo>
+    <data>
+        <!-- CLASE CESTA -->
+        <!-- Vista de lista para visualizar las cestas de compra -->
+        <record model="ir.ui.view" id="cesta_compra_cesta_list">
+            <field name="name">Lista Cesta</field>
+            <field name="model">cesta_compra.cesta</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <!-- Definición de los campos a mostrar en la lista -->
+                    <field name="name"/>
+                    <field name="fecha_pedido"/>
+                    <field name="estado"/>
+                    <field name="cliente_id"/>
+                    <field name="cantidad_productos"/>
+                    <field name="total_cesta"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Vista de formulario para la edición o visualización de una cesta específica -->
+        <record model="ir.ui.view" id="cesta_compra_cesta_form">
+            <field name="name">Formulario de Cesta</field>
+            <field name="model">cesta_compra.cesta</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <!-- Información básica de la Cesta -->
+                        <group>
+                            <h2>
+                                <field name="name" readonly="1"/>
+                            </h2>
+                            <field name="fecha_pedido"/>
+                            <field name="estado"/>
+                            <field name="cliente_id"/>
+                            <field name="cantidad_productos" readonly="1"/>
+                        </group>
+                        <notebook>
+                            <page string="Líneas de Pedido">
+                                <field name="linea_pedido_ids">
+                                    <!-- Vista tipo lista para las líneas de pedido dentro de la cesta -->
+                                    <tree string="Líneas de Pedido" editable="bottom">
+                                        <field name="producto_id"/>
+                                        <field name="cantidad"/>
+                                        <field name="subtotal" readonly="1"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                        <!-- Información de resumen de la cesta: Muestra el descuento y el total de la cesta -->
+                        <group>
+                            <field name="descuento"/>
+                            <field name="total_cesta" readonly="1"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Acción que abre la vista de lista y formulario cuando el usuario navega a esta sección -->
+        <record model="ir.actions.act_window" id="cesta_compra_cesta_window">
+            <field name="name">Cestas</field>
+            <field name="res_model">cesta_compra.cesta</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Elemento de menú: Añade la opción "Cestas" al menú principal de la aplicación -->
+        <menuitem name="Cestas" id="cesta_compra.menu_cesta" parent="cesta_compra.menu_root"
+                  action="cesta_compra_cesta_window"/>
+    </data>
+</odoo>
