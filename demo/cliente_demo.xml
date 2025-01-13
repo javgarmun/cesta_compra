@@ -1,0 +1,105 @@
+<odoo>
+    <data>
+        <!-- CLIENTES DEMO -->
+        <!-- Por defecto los clientes son asignados al país España -->
+        <record id="cliente_demo_1" model="cesta_compra.cliente">
+            <field name="name">Juan</field>
+            <field name="apellidos">Pérez Gómez</field>
+            <field name="email">juanperez@example.com</field>
+            <field name="telefono">123456789</field>
+            <field name="direccion">Calle Falsa 123</field>
+            <field name="activo">True</field>
+            <field name="country_id" ref="base.es"/>
+        </record>
+
+        <record id="cliente_demo_2" model="cesta_compra.cliente">
+            <field name="name">Ana</field>
+            <field name="apellidos">Muñoz Sánchez</field>
+            <field name="email">anamartinez@example.com</field>
+            <field name="telefono">987654321</field>
+            <field name="direccion">Avenida Libertad 456</field>
+            <field name="activo">True</field>
+            <field name="country_id" ref="base.es"/>
+        </record>
+
+        <record id="cliente_demo_3" model="cesta_compra.cliente">
+            <field name="name">Carlos</field>
+            <field name="apellidos">Gómez Rodrigo</field>
+            <field name="email">carlosgomez@example.com</field>
+            <field name="telefono">555666777</field>
+            <field name="direccion">Plaza Mayor 789</field>
+            <field name="activo">True</field>
+            <field name="country_id" ref="base.es"/>
+        </record>
+
+        <record id="cliente_demo_4" model="cesta_compra.cliente">
+            <field name="name">María</field>
+            <field name="apellidos">López Santana</field>
+            <field name="email">marialopez@example.com</field>
+            <field name="telefono">666777888</field>
+            <field name="direccion">Calle del Sol 101</field>
+            <field name="activo">True</field>
+            <field name="country_id" ref="base.es"/>
+        </record>
+
+        <record id="cliente_demo_5" model="cesta_compra.cliente">
+            <field name="name">David</field>
+            <field name="apellidos">Espadán Gómez</field>
+            <field name="email">davidsanchez@example.com</field>
+            <field name="telefono">777888999</field>
+            <field name="direccion">Avenida de la Paz 12</field>
+            <field name="activo">True</field>
+            <field name="country_id" ref="base.es"/>
+        </record>
+
+        <record id="cliente_demo_6" model="cesta_compra.cliente">
+            <field name="name">Laura</field>
+            <field name="apellidos">García Romero</field>
+            <field name="email">lauragarcia@example.com</field>
+            <field name="telefono">444555666</field>
+            <field name="direccion">Calle del Mar 22</field>
+            <field name="activo">True</field>
+            <field name="country_id" ref="base.es"/>
+        </record>
+
+        <record id="cliente_demo_7" model="cesta_compra.cliente">
+            <field name="name">Pedro</field>
+            <field name="apellidos">Rodríguez Alfonso</field>
+            <field name="email">pedrorodriguez@example.com</field>
+            <field name="telefono">888999000</field>
+            <field name="direccion">Avenida Primavera 56</field>
+            <field name="activo">True</field>
+            <field name="country_id" ref="base.es"/>
+        </record>
+
+        <record id="cliente_demo_8" model="cesta_compra.cliente">
+            <field name="name">Sofía</field>
+            <field name="apellidos">Hernández Calle</field>
+            <field name="email">sofiahernandez@example.com</field>
+            <field name="telefono">333444555</field>
+            <field name="direccion">Calle Real 77</field>
+            <field name="activo">True</field>
+            <field name="country_id" ref="base.es"/>
+        </record>
+
+        <record id="cliente_demo_9" model="cesta_compra.cliente">
+            <field name="name">Iván</field>
+            <field name="apellidos">Martín Ruiz</field>
+            <field name="email">ivanmartin@example.com</field>
+            <field name="telefono">999000111</field>
+            <field name="direccion">Calle Libertad 34</field>
+            <field name="activo">True</field>
+            <field name="country_id" ref="base.es"/>
+        </record>
+
+        <record id="cliente_demo_10" model="cesta_compra.cliente">
+            <field name="name">Isabel</field>
+            <field name="apellidos">Luna López</field>
+            <field name="email">isabelvazquez@example.com</field>
+            <field name="telefono">222333444</field>
+            <field name="direccion">Plaza del Sol 99</field>
+            <field name="activo">True</field>
+            <field name="country_id" ref="base.es"/>
+        </record>
+    </data>
+</odoo>

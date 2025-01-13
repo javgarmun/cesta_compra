@@ -1,0 +1,64 @@
+<odoo>
+    <data>
+        <!-- PRODUCTOS DEMO -->
+        <record id="producto_demo_1" model="cesta_compra.producto">
+            <field name="name">Camiseta de Algodón</field>
+            <field name="descripcion">Camiseta básica de algodón para uso diario.</field>
+            <field name="precio">19.99</field>
+        </record>
+
+        <record id="producto_demo_2" model="cesta_compra.producto">
+            <field name="name">Revista de Moda</field>
+            <field name="descripcion">Revista mensual con las últimas tendencias de moda.</field>
+            <field name="precio">5.99</field>
+        </record>
+
+        <record id="producto_demo_3" model="cesta_compra.producto">
+            <field name="name">Aspiradora Robot</field>
+            <field name="descripcion">Aspiradora inteligente para la limpieza autónoma de tu hogar.</field>
+            <field name="precio">199.99</field>
+        </record>
+
+        <record id="producto_demo_4" model="cesta_compra.producto">
+            <field name="name">Juego de Sábanas</field>
+            <field name="descripcion">Juego de sábanas de algodón, ideal para la cama de 150 cm.</field>
+            <field name="precio">29.99</field>
+        </record>
+
+        <record id="producto_demo_5" model="cesta_compra.producto">
+            <field name="name">Cafetera Espresso</field>
+            <field name="descripcion">Cafetera de cápsulas para preparar café espresso de calidad.</field>
+            <field name="precio">89.99</field>
+        </record>
+
+        <record id="producto_demo_6" model="cesta_compra.producto">
+            <field name="name">Paquete de Galletas</field>
+            <field name="descripcion">Galletas artesanas de avena, perfectas para merendar.</field>
+            <field name="precio">3.49</field>
+        </record>
+
+        <record id="producto_demo_7" model="cesta_compra.producto">
+            <field name="name">Smartphone</field>
+            <field name="descripcion">Teléfono móvil con pantalla OLED y cámara de 48 MP.</field>
+            <field name="precio">399.99</field>
+        </record>
+
+        <record id="producto_demo_8" model="cesta_compra.producto">
+            <field name="name">Plancha de Vapor</field>
+            <field name="descripcion">Plancha eléctrica con vapor para una plancha más fácil y eficiente.</field>
+            <field name="precio">49.99</field>
+        </record>
+
+        <record id="producto_demo_9" model="cesta_compra.producto">
+            <field name="name">Bicicleta de Montaña</field>
+            <field name="descripcion">Bicicleta resistente para terrenos irregulares y montaña.</field>
+            <field name="precio">349.99</field>
+        </record>
+
+        <record id="producto_demo_10" model="cesta_compra.producto">
+            <field name="name">Saco de Dormir</field>
+            <field name="descripcion">Saco de dormir térmico, ideal para camping y excursiones.</field>
+            <field name="precio">59.99</field>
+        </record>
+    </data>
+</odoo>
